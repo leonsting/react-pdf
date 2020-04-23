@@ -1,13 +1,13 @@
 {
-  "name": "react-pdf",
-  "version": "5.0.0-beta.2",
+  "name": "@tripair/react-pdf",
+  "version": "1.0.0",
   "description": "Display PDFs in your React app as easily as if they were images.",
   "main": "dist/umd/entry.js",
   "module": "dist/esm/entry.js",
   "source": "src/entry.js",
   "scripts": {
-    "build": "yarn build-js-all && yarn copy-styles",
-    "build-js-all": "yarn build-js-esm && yarn build-js-umd",
+    "build": "npm run build-js-all && npm run copy-styles",
+    "build-js-all": "npm run build-js-esm && npm run build-js-umd",
     "build-js-esm": "cross-env BABEL_ENV=production-esm babel src -d dist/esm --ignore **/*.spec.js,**/*.spec.jsx",
     "build-js-umd": "cross-env BABEL_ENV=production-umd babel src -d dist/umd --ignore **/*.spec.js,**/*.spec.jsx",
     "clean": "rimraf dist",
@@ -15,8 +15,8 @@
     "jest": "jest",
     "jest-coverage": "jest --coverage",
     "lint": "eslint sample/ src/ test/ --ext .jsx,.js",
-    "prepublishOnly": "yarn clean && yarn build",
-    "test": "yarn lint && yarn jest"
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "npm run lint && npm run jest"
   },
   "jest": {
     "setupFiles": [
@@ -41,54 +41,16 @@
     "react"
   ],
   "author": {
-    "name": "Wojciech Maj",
-    "email": "kontakt@wojtekmaj.pl"
+    "name": "Leon Sting"
   },
-  "contributors": [
-    {
-      "name": "Anenth",
-      "email": "anenthvishnu@gmail.com"
-    },
-    {
-      "name": "Artur Termenji",
-      "email": "atermenji@gmail.com"
-    },
-    {
-      "name": "Bart Van Houtte",
-      "email": "bart.van.houtte@ading.be"
-    },
-    {
-      "name": "Felipe Lacerda",
-      "email": "fegolac@gmail.com"
-    },
-    {
-      "name": "Julia Kieserman",
-      "email": "kieserman.julia@gmail.com"
-    },
-    {
-      "name": "Lucas Simkins",
-      "email": "lucas.simkins@gmail.com"
-    },
-    {
-      "name": "Niklas Närhinen",
-      "email": "niklas@narhinen.net"
-    },
-    {
-      "name": "Robert Scott",
-      "email": "rs@robsco.info"
-    },
-    {
-      "name": "Thomas McCarthy",
-      "email": "tom@tomm.cc"
-    }
-  ],
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.0.0",
+    "eslint-plugin-flowtype": "^4.7.0",
     "make-cancellable-promise": "^1.0.0",
     "make-event-props": "^1.1.0",
     "merge-class-names": "^1.1.1",
-    "pdfjs-dist": "2.3.200",
+    "pdfjs-dist": "^2.4.456",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
@@ -121,13 +83,12 @@
     "react-dom": "^16.3.0"
   },
   "files": [
-    "LICENSE",
     "README.md",
     "dist/",
     "src/"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/wojtekmaj/react-pdf.git"
+    "url": "https://github.com/leonsting/react-pdf.git"
   }
 }

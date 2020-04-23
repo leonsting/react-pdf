@@ -8,6 +8,7 @@ import makeCancellable from 'make-cancellable-promise';
 import mergeClassNames from 'merge-class-names';
 import pdfjs, { PDFDataRangeTransport } from 'pdfjs-dist';
 
+import { EventBus } from 'pdfjs-dist/lib/web/ui_utils';
 import DocumentContext from './DocumentContext';
 
 import Message from './Message';
@@ -61,7 +62,7 @@ export default class Document extends PureComponent {
     },
   };
 
-  linkService = new LinkService();
+  linkService = new LinkService({ eventBus: new EventBus() });
 
   componentDidMount() {
     this.loadDocument();
