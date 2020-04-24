@@ -77,7 +77,7 @@ export default class Document extends PureComponent {
   }
 
   componentWillUnmount() {
-    this.loadingTask.destroy();
+    // this.loadingTask.destroy(); // Cause worker terminated - https://github.com/mozilla/pdf.js/issues/11595
     cancelRunningTask(this.runningTask);
   }
 

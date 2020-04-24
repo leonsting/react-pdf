@@ -1,6 +1,6 @@
 {
   "name": "@tripair/react-pdf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Display PDFs in your React app as easily as if they were images.",
   "main": "dist/umd/entry.js",
   "module": "dist/esm/entry.js",
